@@ -9,35 +9,31 @@ var typed = new Typed(".text", {
     backSpeed: 100,
     backDelay: 1000,
     loop: true
-});
+})
+
+
 
 const menuToggle = document.getElementById("menuToggle");
 const navbar = document.getElementById("navbar");
 
-menuToggle.addEventListener("click", function () {
+menuToggle.addEventListener("click", () => {
 
     navbar.classList.toggle("active");
 
     const isOpen = navbar.classList.contains("active");
 
-    menuToggle.innerHTML = isOpen
-        ? '<i class="bi bi-x-lg"></i>'
-        : '<i class="bi bi-list"></i>';
+    menuToggle.innerHTML = isOpen ? "✕" : "☰";
 
     menuToggle.setAttribute("aria-expanded", isOpen);
 
 });
 
-// Close menu after clicking a navigation link
-
 document.querySelectorAll(".navbar a").forEach(link => {
 
-    link.addEventListener("click", function () {
+    link.addEventListener("click", () => {
 
         navbar.classList.remove("active");
-
-        menuToggle.innerHTML = '<i class="bi bi-list"></i>';
-
+        menuToggle.innerHTML = "☰";
         menuToggle.setAttribute("aria-expanded", "false");
 
     });
