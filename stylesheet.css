@@ -56,7 +56,7 @@ body {
     width: 100%;
     justify-content: space-between;
     height: 100vh;
-    background: url("https://chinnisrinu7979.github.io/my-portfolio/Neon%20Portrait%20Streaming%20Banner.png") no-repeat center center !important;
+    background: url("https://chinnisrinu7979.github.io/my-portfolio/Neon%20Portrait%20Streaming%20Banner.png") no-repeat center center;
     background-size: cover;
     background-position: center;
     display: flex;
@@ -836,37 +836,51 @@ html {
     }
 }
 
-/* MOBILE HOME: IMAGE TOP, TEXT BOTTOM */
+/* =====================================
+   MOBILE HOME RESPONSIVE DESIGN
+===================================== */
 
 @media screen and (max-width: 768px) {
 
     .home {
+        width: 100%;
         min-height: 100vh;
         height: auto;
-        padding: 110px 6% 45px;
+
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: flex-start;
-        text-align: center;
-        background-image: none;
+
+        padding: 165px 6% 50px;
+
+        /* Remove desktop background */
+        background-image: none !important;
+
+        text-align: left;
         overflow: hidden;
     }
 
+    /* Profile image at TOP */
     .home::before {
         content: "";
         display: block;
-        width: min(65vw, 240px);
-        height: 240px;
-        flex-shrink: 0;
-        margin: 0 auto 25px;
 
-        background-image: url("./Neon%20Portrait%20Streaming%20Banner.png");
+        width: min(85vw, 320px);
+        height: 260px;
+
+        flex-shrink: 0;
+        margin: 0 auto 30px;
+
+        background-image: url("https://chinnisrinu7979.github.io/my-portfolio/Neon%20Portrait%20Streaming%20Banner.png");
         background-repeat: no-repeat;
-        background-size: contain;
-        background-position: center;
+        background-size: cover;
+        background-position: 75% center;
+
+        border-radius: 20px;
     }
 
+    /* Text below image */
     .home-content {
         width: 100%;
         max-width: 100%;
@@ -875,45 +889,131 @@ html {
     }
 
     .home-content h3 {
-        font-size: 19px;
+        font-size: clamp(18px, 5vw, 23px);
         line-height: 1.4;
+        margin-bottom: 8px;
     }
 
     .home-content h1 {
-        font-size: 34px;
+        font-size: clamp(30px, 8vw, 40px);
         line-height: 1.2;
+        margin: 5px 0;
     }
 
     .home-content p {
         font-size: 14px;
-        line-height: 1.6;
-        margin: 15px 0 20px;
+        line-height: 1.7;
+        margin: 18px 0;
+        width: 100%;
+        overflow-wrap: break-word;
     }
 
+    /* Social icons */
     .home-sci {
-        justify-content: center;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        gap: 12px;
     }
 
+    .home-sci a {
+        margin: 10px 0;
+        width: 42px;
+        height: 42px;
+    }
+
+    /* More About Me button */
     .btn-box {
         display: inline-block;
+        margin-top: 15px;
     }
 }
 
+/* Small mobile screens */
 @media screen and (max-width: 480px) {
 
     .home {
-        padding-top: 100px;
+        padding: 150px 5% 40px;
     }
 
     .home::before {
-        width: 200px;
-        height: 210px;
-        margin-bottom: 20px;
+        width: 230px;
+        height: 230px;
+        margin-bottom: 25px;
     }
 
     .home-content h1 {
         font-size: 30px;
     }
+
+    .home-content h3 {
+        font-size: 18px;
+    }
+
+    .home-content p {
+        font-size: 14px;
+    }
 }
+
+/* Hamburger button - Desktop */
+
+.menu-toggle {
+    display: none;
+    background: transparent;
+    border: none;
+    color: #0ef;
+    font-size: 32px;
+    cursor: pointer;
+}
+
+/* Mobile Navigation */
+
+@media screen and (max-width: 768px) {
+
+    .header {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 15px 6%;
+        background: #081b29;
+    }
+
+    .menu-toggle {
+        display: block;
+        z-index: 101;
+    }
+
+    .navbar {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+
+        display: none;
+        flex-direction: column;
+        align-items: center;
+
+        background: #081b29;
+        padding: 20px 0;
+        gap: 20px;
+
+        border-top: 1px solid rgba(0,238,255,0.3);
+        box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+    }
+
+    .navbar.active {
+        display: flex;
+    }
+
+    .navbar a {
+        margin: 0;
+        font-size: 18px;
+        opacity: 1;
+        animation: none;
+    }
+}
+
+
 
 
