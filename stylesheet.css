@@ -862,13 +862,23 @@ html {
         overflow: hidden;
     }
 
-   .home::before {
+  .home::before {
+    /* Important: required to display pseudo-element */
+    content: "";
+    display: block;
+
+    width: 250px;
+    height: 250px;
+    flex-shrink: 0;
+
+    margin: 0 auto 35px;
+
     background-image: url("https://chinnisrinu7979.github.io/my-portfolio/Neon%20Portrait%20Streaming%20Banner.png");
 
     background-repeat: no-repeat;
     background-size: 380% auto;
 
-    /* Show complete hair and center the face */
+    /* Adjust face and hair position */
     background-position: 85% 25%;
 
     border-radius: 50%;
