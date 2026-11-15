@@ -836,9 +836,10 @@ html {
     }
 }
 
-/* =====================================
-   MOBILE HOME RESPONSIVE DESIGN
-===================================== */
+
+/* ======================================
+   MOBILE HOME - FINAL DESIGN
+====================================== */
 
 @media screen and (max-width: 768px) {
 
@@ -852,35 +853,43 @@ html {
         align-items: center;
         justify-content: flex-start;
 
-        padding: 165px 6% 50px;
+        padding: 145px 6% 50px;
 
-        /* Remove desktop background */
-        background-image: none !important;
+        /* Same dark background */
+        background: #081b29 !important;
 
         text-align: left;
         overflow: hidden;
     }
 
-    /* Profile image at TOP */
+    /* Profile image only */
     .home::before {
         content: "";
         display: block;
 
-        width: min(85vw, 320px);
-        height: 260px;
+        width: 250px;
+        height: 250px;
 
         flex-shrink: 0;
-        margin: 0 auto 30px;
+        margin: 0 auto 35px;
 
+        /* Crop the portrait from your banner */
         background-image: url("https://chinnisrinu7979.github.io/my-portfolio/Neon%20Portrait%20Streaming%20Banner.png");
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: 75% center;
 
-        border-radius: 20px;
+        background-repeat: no-repeat;
+        background-size: 380% auto;
+        background-position: 85% center;
+
+        border-radius: 50%;
+        border: 3px solid #0ef;
+
+        box-shadow:
+            0 0 15px #0ef,
+            0 0 30px #0ef,
+            0 0 45px rgba(185, 103, 255, .7);
     }
 
-    /* Text below image */
+    /* Introduction */
     .home-content {
         width: 100%;
         max-width: 100%;
@@ -888,66 +897,69 @@ html {
         z-index: 2;
     }
 
+    .home-content h3,
+    .home-content h1,
+    .home-content p {
+        color: #ededed;
+        opacity: 1;
+    }
+
     .home-content h3 {
-        font-size: clamp(18px, 5vw, 23px);
-        line-height: 1.4;
-        margin-bottom: 8px;
+        font-size: 20px;
+        line-height: 1.5;
     }
 
     .home-content h1 {
-        font-size: clamp(30px, 8vw, 40px);
-        line-height: 1.2;
+        font-size: 36px;
+        line-height: 1.3;
         margin: 5px 0;
+    }
+
+    .home-content h3 span {
+        color: #0ef;
     }
 
     .home-content p {
         font-size: 14px;
-        line-height: 1.7;
-        margin: 18px 0;
-        width: 100%;
-        overflow-wrap: break-word;
+        line-height: 1.8;
+        margin: 20px 0;
     }
 
     /* Social icons */
     .home-sci {
         display: flex;
         flex-wrap: wrap;
-        justify-content: flex-start;
         gap: 12px;
     }
 
     .home-sci a {
+        width: 45px;
+        height: 45px;
         margin: 10px 0;
-        width: 42px;
-        height: 42px;
     }
 
-    /* More About Me button */
+    /* Button */
     .btn-box {
         display: inline-block;
         margin-top: 15px;
     }
 }
 
-/* Small mobile screens */
+/* Small screens */
 @media screen and (max-width: 480px) {
 
     .home {
-        padding: 150px 5% 40px;
+        padding: 135px 5% 40px;
     }
 
     .home::before {
-        width: 230px;
-        height: 230px;
-        margin-bottom: 25px;
+        width: 220px;
+        height: 220px;
+        margin-bottom: 30px;
     }
 
     .home-content h1 {
-        font-size: 30px;
-    }
-
-    .home-content h3 {
-        font-size: 18px;
+        font-size: 32px;
     }
 
     .home-content p {
