@@ -56,7 +56,7 @@ body {
     width: 100%;
     justify-content: space-between;
     height: 100vh;
-    background-image: url("./Neon Portrait Streaming Banner.png");
+    background: url("https://YOUR-USERNAME.github.io/my-portfolio/Neon%20Portrait%20Streaming%20Banner.png") no-repeat center center !important;
     background-size: cover;
     background-position: center;
     display: flex;
