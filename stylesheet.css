@@ -836,3 +836,84 @@ html {
     }
 }
 
+/* MOBILE HOME: IMAGE TOP, TEXT BOTTOM */
+
+@media screen and (max-width: 768px) {
+
+    .home {
+        min-height: 100vh;
+        height: auto;
+        padding: 110px 6% 45px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        text-align: center;
+        background-image: none;
+        overflow: hidden;
+    }
+
+    .home::before {
+        content: "";
+        display: block;
+        width: min(65vw, 240px);
+        height: 240px;
+        flex-shrink: 0;
+        margin: 0 auto 25px;
+
+        background-image: url("./Neon%20Portrait%20Streaming%20Banner.png");
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center;
+    }
+
+    .home-content {
+        width: 100%;
+        max-width: 100%;
+        position: relative;
+        z-index: 2;
+    }
+
+    .home-content h3 {
+        font-size: 19px;
+        line-height: 1.4;
+    }
+
+    .home-content h1 {
+        font-size: 34px;
+        line-height: 1.2;
+    }
+
+    .home-content p {
+        font-size: 14px;
+        line-height: 1.6;
+        margin: 15px 0 20px;
+    }
+
+    .home-sci {
+        justify-content: center;
+    }
+
+    .btn-box {
+        display: inline-block;
+    }
+}
+
+@media screen and (max-width: 480px) {
+
+    .home {
+        padding-top: 100px;
+    }
+
+    .home::before {
+        width: 200px;
+        height: 210px;
+        margin-bottom: 20px;
+    }
+
+    .home-content h1 {
+        font-size: 30px;
+    }
+}
+
+
