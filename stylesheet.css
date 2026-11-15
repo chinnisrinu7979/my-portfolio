@@ -871,19 +871,17 @@ html {
     flex-shrink: 0;
     margin: 0 auto 35px;
 
-    background-image: url("https://chinnisrinu7979.github.io/my-portfolio/Neon%20Portrait%20Streaming%20Banner.png");
-
-    background-repeat: no-repeat;
-    background-size: 380% auto;
-    background-position: 83% 43%;
+    background-image: url("https://chinnisrinu7979.github.io/my-portfolio/Neon%20Portrait%20Streaming%20Banner.png") !important;
+    background-repeat: no-repeat !important;
+    background-size: 380% auto !important;
+    background-position: 83% 43% !important;
 
     border-radius: 50%;
     border: 3px solid #0ef;
 
-    box-shadow:
-        0 0 15px #0ef,
-        0 0 30px #0ef,
-        0 0 45px rgba(185, 103, 255, .7);
+    box-shadow: 0 0 15px #0ef,
+                0 0 30px #0ef,
+                0 0 45px rgba(185, 103, 255, .7);
 }
 
     /* Introduction */
