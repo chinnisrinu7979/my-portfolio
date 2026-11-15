@@ -863,23 +863,19 @@ html {
     }
 
   .home::before {
-    /* Important: required to display pseudo-element */
     content: "";
     display: block;
 
     width: 250px;
     height: 250px;
     flex-shrink: 0;
-
     margin: 0 auto 35px;
 
     background-image: url("https://chinnisrinu7979.github.io/my-portfolio/Neon%20Portrait%20Streaming%20Banner.png");
 
     background-repeat: no-repeat;
     background-size: 380% auto;
-
-    /* Adjust face and hair position */
-    background-position: 100% 50%;
+    background-position: 50% 35%;
 
     border-radius: 50%;
     border: 3px solid #0ef;
