@@ -862,32 +862,23 @@ html {
         overflow: hidden;
     }
 
-    /* Profile image only */
-    .home::before {
-        content: "";
-        display: block;
+   .home::before {
+    background-image: url("https://chinnisrinu7979.github.io/my-portfolio/Neon%20Portrait%20Streaming%20Banner.png");
 
-        width: 250px;
-        height: 250px;
+    background-repeat: no-repeat;
+    background-size: 380% auto;
 
-        flex-shrink: 0;
-        margin: 0 auto 35px;
+    /* Show complete hair and center the face */
+    background-position: 85% 25%;
 
-        /* Crop the portrait from your banner */
-        background-image: url("https://chinnisrinu7979.github.io/my-portfolio/Neon%20Portrait%20Streaming%20Banner.png");
+    border-radius: 50%;
+    border: 3px solid #0ef;
 
-        background-repeat: no-repeat;
-        background-size: 380% auto;
-        background-position: 85% center;
-
-        border-radius: 50%;
-        border: 3px solid #0ef;
-
-        box-shadow:
-            0 0 15px #0ef,
-            0 0 30px #0ef,
-            0 0 45px rgba(185, 103, 255, .7);
-    }
+    box-shadow:
+        0 0 15px #0ef,
+        0 0 30px #0ef,
+        0 0 45px rgba(185, 103, 255, .7);
+}
 
     /* Introduction */
     .home-content {
